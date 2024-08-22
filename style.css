@@ -32,6 +32,7 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+  box-shadow: 5px 0 5px #a1a1a1;
 }
 
 .header-container {
@@ -165,7 +166,7 @@ header nav {
 
 .what-we-do {
   width: 85%;
-  margin: 3rem auto;
+  margin: 3rem auto 0 auto;
 }
 
 .what-we-do h2 {
@@ -175,7 +176,7 @@ header nav {
 
 .what-we-do .info {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 60%;
   margin: 0 auto;
   color: var(--clr-main-gray);
@@ -183,17 +184,21 @@ header nav {
 
 .card {
   background-color: var(--clr-main-purple);
-  padding: 1rem;
+  padding: 2rem;
   max-width: 350px;
   max-height: 350px;
   margin: 2rem auto;
   border-radius: 5px;
 }
 
+.card:hover {
+  background-color: var(--clr-main-pink);
+}
+
 .card img {
   max-width: 50px;
   display: block;
-  margin: 1.5rem auto;
+  margin: 0.5rem auto 1rem auto;
 }
 
 .card span {
@@ -206,7 +211,7 @@ header nav {
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   text-align: center;
   color: var(--clr-white);
 }
@@ -216,6 +221,44 @@ header nav {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.about-us {
+  width: 85%;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-image {
+  width: 40%;
+}
+
+.about-image img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.about-text-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text-container h2 {
+  font-size: clamp(0.5rem, 7vw, 2.5rem);
+}
+
+.about-text-container .mission {
+  margin-top: 3rem;
+}
+
+.about-text-container p {
+  font-size: 0.9rem;
+  color: var(--clr-main-gray);
 }
 
 @media (max-width: 1000px) {
@@ -262,6 +305,20 @@ header nav {
   .what-we-do .info {
     width: 100%;
   }
+
+  .about-us {
+    display: block;
+  }
+
+  .about-us .about-image {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .about-text-container {
+    width: fit-content;
+    margin: 3rem auto 0 auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -273,7 +330,8 @@ header nav {
 @media (max-width: 700px) {
   .header-container,
   .hero-content,
-  .what-we-do {
+  .what-we-do,
+  .about-us {
     width: 90%;
   }
 
@@ -286,7 +344,8 @@ header nav {
   .hero-text-container p,
   .cta-btn a,
   .what-we-do .info,
-  .card p {
+  .card p,
+  .about-text-container p {
     font-size: 0.8rem;
   }
 
