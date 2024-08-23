@@ -33,6 +33,7 @@ header {
   width: 100%;
   top: 0;
   box-shadow: 5px 0 5px #a1a1a1;
+  z-index: 999;
 }
 
 .header-container {
@@ -52,6 +53,12 @@ header nav {
   font-weight: 600;
 }
 
+.nav-links-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -64,7 +71,8 @@ header nav {
   align-items: center;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-btn a {
   text-decoration: none;
   color: var(--clr-main-black);
   font-size: 0.9rem;
@@ -76,14 +84,15 @@ header nav {
   transition: all 0.1s ease-out;
 }
 
-.nav-links li:last-child a {
+.nav-btn a {
   background-color: var(--clr-main-pink);
   padding: 0.8em 2em;
   border-radius: 5px;
   color: var(--clr-white);
+  margin-left: 2rem;
 }
 
-.nav-links li:last-child a:hover {
+.nav-btn a:hover {
   background-color: var(--clr-deep-pink);
   border-bottom: none;
 }
@@ -239,6 +248,14 @@ header nav {
   max-width: 380px;
   width: 100%;
   border-radius: 5px;
+  filter: grayscale(0%);
+}
+
+.about-image img:hover {
+  filter: grayscale(100%);
+  max-width: 380px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .about-text-container {
@@ -259,6 +276,92 @@ header nav {
 .about-text-container p {
   font-size: 0.9rem;
   color: var(--clr-main-gray);
+}
+
+.team {
+  width: 85%;
+  margin: 3rem auto 0 auto;
+}
+
+.team h2 {
+  font-size: clamp(0.5rem, 7vw, 2.5rem);
+  text-align: center;
+}
+
+.team p {
+  font-size: 0.9rem;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  color: var(--clr-main-gray);
+}
+
+.members-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.member {
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+}
+
+.member-profile {
+  position: relative;
+}
+
+.member-profile img {
+  max-width: 350px;
+  width: 100%;
+  max-height: 350px;
+  min-height: 280px;
+  filter: brightness(80%);
+  border-radius: 10px;
+}
+
+.member-profile img:hover {
+  filter: brightness(40%);
+}
+
+.status {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+}
+.status span {
+  font-weight: 500;
+  color: var(--clr-white);
+  text-shadow: 0 0 10px var(--clr-main-black);
+  text-align: center;
+  display: block;
+}
+
+.status h3 {
+  color: var(--clr-white);
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px var(--clr-main-black);
+  text-align: center;
+}
+
+.profile-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.status a {
+  text-decoration: none;
+  background-color: var(--clr-main-pink);
+  padding: 0.9rem;
+  color: var(--clr-white);
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.status a:hover {
+  background-color: var(--clr-deep-pink);
 }
 
 @media (max-width: 1000px) {
@@ -302,7 +405,8 @@ header nav {
     justify-content: center;
   }
 
-  .what-we-do .info {
+  .what-we-do .info,
+  .team p {
     width: 100%;
   }
 
@@ -325,13 +429,29 @@ header nav {
   .nav-links {
     display: none;
   }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;
+    top: 4rem;
+    background-color: var(--clr-white);
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: 700px) {
   .header-container,
   .hero-content,
   .what-we-do,
-  .about-us {
+  .about-us,
+  .team {
     width: 90%;
   }
 
@@ -345,7 +465,8 @@ header nav {
   .cta-btn a,
   .what-we-do .info,
   .card p,
-  .about-text-container p {
+  .about-text-container p,
+  .team p {
     font-size: 0.8rem;
   }
 
@@ -359,5 +480,9 @@ header nav {
     max-width: none;
     max-height: none;
     margin: 0.8rem auto;
+  }
+
+  .status {
+    top: 50%;
   }
 }
