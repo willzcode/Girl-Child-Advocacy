@@ -175,7 +175,7 @@ header nav {
 
 .what-we-do {
   width: 85%;
-  margin: 3rem auto 0 auto;
+  margin: 5rem auto 0 auto;
 }
 
 .what-we-do h2 {
@@ -234,7 +234,7 @@ header nav {
 
 .about-us {
   width: 85%;
-  margin: 3rem auto 0 auto;
+  margin: 5rem auto 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -280,7 +280,7 @@ header nav {
 
 .team {
   width: 85%;
-  margin: 3rem auto 0 auto;
+  margin: 5rem auto 0 auto;
 }
 
 .team h2 {
@@ -364,6 +364,97 @@ header nav {
   background-color: var(--clr-deep-pink);
 }
 
+.ready-container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.ready {
+  margin-top: 3rem;
+  background-color: var(--clr-main-pink);
+  padding: 4rem 0 3.5rem 0;
+}
+
+.ready p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-white);
+}
+
+.ready h2 {
+  font-size: clamp(0.5rem, 7vw, 2rem);
+  text-align: center;
+  color: var(--clr-white);
+}
+
+.donate-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.donate-btn a {
+  background-color: var(--clr-white);
+  padding: 0.8em 2em;
+  border-radius: 5px;
+  color: var(--clr-main-pink);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.join-us {
+  width: 85%;
+  margin: 6rem auto 0 auto;
+}
+
+.join-us h2 {
+  font-size: clamp(0.5rem, 7vw, 2.5rem);
+  text-align: center;
+  color: var(--clr-main-black);
+}
+
+.join-image {
+  width: 40%;
+}
+
+.join-image img {
+  max-width: 380px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.join-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.point img {
+  width: 60px;
+  height: 60px;
+}
+
+.point span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.point p {
+  font-size: 0.9rem;
+  color: var(--clr-main-gray);
+}
+
 @media (max-width: 1000px) {
   .hero-content {
     display: block;
@@ -423,6 +514,19 @@ header nav {
     width: fit-content;
     margin: 3rem auto 0 auto;
   }
+
+  .join-container {
+    display: block;
+  }
+
+  .join-image {
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+  }
+
+  .join-image img {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 900px) {
@@ -451,7 +555,9 @@ header nav {
   .hero-content,
   .what-we-do,
   .about-us,
-  .team {
+  .team,
+  .ready-container,
+  .join-us {
     width: 90%;
   }
 
@@ -466,7 +572,8 @@ header nav {
   .what-we-do .info,
   .card p,
   .about-text-container p,
-  .team p {
+  .team p,
+  .join p {
     font-size: 0.8rem;
   }
 
