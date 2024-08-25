@@ -16,15 +16,23 @@
     <header>
       <div class="header-container">
         <nav>
-          <div class="logo"><a href="#">GCA</a></div>
+          <div class="logo">
+            <label for="nav-toggle" class="nav-toggle-label">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <a href="#">GCA</a>
+          </div>
           <div class="nav-links-container">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" />
             <div class="nav-links">
               <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#what-we-do">Who We Do</a></li>
                 <li><a href="#about-us">About Us</a></li>
                 <li><a href="#team">Our Team</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
               </ul>
             </div>
             <div class="nav-btn"><a href="#">Donate</a></div>
@@ -244,7 +252,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-us">
+      <section class="contact-us" id="contact-us">
         <h2>Get In Touch With Us</h2>
         <p>
           Learn more about our mission or to support a girl child in need.
