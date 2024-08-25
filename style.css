@@ -396,12 +396,19 @@ header nav {
 
 .donate-btn a {
   background-color: var(--clr-white);
-  padding: 0.8em 2em;
+  padding: 0.7em 1.8em;
   border-radius: 5px;
   color: var(--clr-main-pink);
   font-size: 0.9rem;
   text-decoration: none;
   font-weight: 500;
+  border: 2px solid var(--clr-white);
+}
+
+.donate-btn a:hover {
+  background-color: var(--clr-main-pink);
+  color: var(--clr-white);
+  border: 2px solid var(--clr-white);
 }
 
 .join-us {
@@ -455,6 +462,112 @@ header nav {
   color: var(--clr-main-gray);
 }
 
+.contact-us {
+  width: 85%;
+  margin: 5rem auto;
+}
+
+.contact-us h2 {
+  font-size: clamp(0.5rem, 7vw, 2.5rem);
+  text-align: center;
+}
+
+.contact-us p {
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--clr-main-gray);
+  width: 60%;
+  margin: 0 auto;
+}
+
+form {
+  background-color: var(--clr-main-pink);
+  padding: 1rem;
+  margin: 3rem 0;
+  border-radius: 2px;
+}
+
+input {
+  padding: 1.1rem 0 1.1rem 0.5rem;
+  margin-bottom: 1rem;
+  width: 49.2%;
+  outline: none;
+  border: none;
+  display: block;
+  border-radius: 2px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 1rem 0 1rem 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.submit {
+  background-color: var(--clr-white);
+  padding: 0.9rem;
+  color: var(--clr-main-gray);
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: fit-content;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 2px solid var(--clr-white);
+}
+
+.submit:hover {
+  background-color: var(--clr-main-pink);
+  border: 2px solid var(--clr-white);
+  color: var(--clr-white);
+}
+
+.contact-tab {
+  background-color: rgb(199, 199, 199);
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+.contact-tab span {
+  display: block;
+  font-weight: 600;
+}
+
+.contact-tab a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--clr-main-gray);
+}
+
+.contact-tab a:hover {
+  color: var(--clr-main-pink);
+}
+
+footer {
+  width: 85%;
+  margin: 0 auto 2rem auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: var(--clr-main-gray);
+  text-align: center;
+}
+
+footer span {
+  color: var(--clr-main-pink);
+}
+
 @media (max-width: 1000px) {
   .hero-content {
     display: block;
@@ -497,7 +610,8 @@ header nav {
   }
 
   .what-we-do .info,
-  .team p {
+  .team p,
+  .contact-us p {
     width: 100%;
   }
 
@@ -557,12 +671,22 @@ header nav {
   .about-us,
   .team,
   .ready-container,
-  .join-us {
+  .join-us,
+  .contact-us,
+  footer {
     width: 90%;
   }
 
   .hero-text-container p {
     width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .input-container {
+    display: block;
   }
 }
 
@@ -573,7 +697,9 @@ header nav {
   .card p,
   .about-text-container p,
   .team p,
-  .join p {
+  .join-us p,
+  .contact-us p,
+  footer p {
     font-size: 0.8rem;
   }
 
