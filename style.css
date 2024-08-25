@@ -37,7 +37,7 @@ header {
 }
 
 .header-container {
-  width: 85%;
+  width: 87%;
   margin: 0 auto;
 }
 
@@ -665,7 +665,10 @@ footer span {
 }
 
 @media (max-width: 700px) {
-  .header-container,
+  .header-container {
+    width: 95%;
+  }
+
   .hero-content,
   .what-we-do,
   .about-us,
