@@ -686,7 +686,7 @@ footer span {
     justify-content: flex-start;
     position: absolute;
     left: 0;
-    top: 4rem;
+    top: 3.8rem;
     background-color: var(--clr-main-pink);
     width: 100%;
   }
