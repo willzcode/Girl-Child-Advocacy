@@ -206,12 +206,16 @@ header nav {
 }
 
 .card {
-  background-color: var(--clr-deep-pink);
+  background-color: var(--clr-main-purple);
   padding: 2rem;
   max-width: 350px;
   max-height: 350px;
   margin: 2rem auto;
   border-radius: 5px;
+}
+
+.card:hover {
+  background-color: var(--clr-main-purple);
 }
 
 
